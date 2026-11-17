@@ -1,0 +1,12 @@
+{
+  "$schema": "https://homemade.dev/schemas/latest/config.json",
+  "warmup": [
+    "npx --yes pnpm@8.15.9 install --frozen-lockfile"
+  ],
+  "install": [
+    "npx --yes pnpm@8.15.9 install --frozen-lockfile",
+    "npx --yes pnpm@8.15.9 exec swc src --out-dir dist -C jsc.parser.syntax=typescript -C jsc.target=es2022 -C module.type=commonjs"
+  ],
+  "services": {},
+  "env_schema": []
+}
